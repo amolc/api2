@@ -1,0 +1,9 @@
+{
+    "name": "80startup API",
+    "version": "0.1.0",
+    "description": "80startup API version 1.0",
+    "apidoc": {
+      "title": "80startups API Documentation",
+      "url" : "https://api.80startups.com/api"
+    }
+  }
