@@ -4,6 +4,7 @@ var path = require('path');
 var serveStatic = require('serve-static');
 var bodyParser = require("body-parser");
 var env = require('./api/env');
+var connection = env.connection;
 
 var globalfunctions = require('./api/globalfunctions');
 

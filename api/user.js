@@ -11,7 +11,7 @@ var model = require("mysql-model-orm");
 var connection = env.connection;
 var Model = new model(connection);
 
-/*
+/** *
  *  @apiGroup User
  * @api {get} /User/getallUser  getallUser
  * @apiName getallUser
@@ -43,11 +43,9 @@ exports.getallUser = async (req, res, next) => {
 
 
 
-
-
-/*
-* @api {post} /User/createUser   createUser
- *  @apiGroup User
+/** 
+ * @api {post} /User/createUser   createUser
+ * @apiGroup User
  * @apiName createUser
  * @apiParam {Number} id            Mandatory Userid
  * @apiParam {Number} first_name    Mandatory first_name.
@@ -67,6 +65,8 @@ exports.getallUser = async (req, res, next) => {
  * We would increase the fields as required.
  *
  */
+
+
 
 
 /**
