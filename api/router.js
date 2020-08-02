@@ -21,8 +21,14 @@ app.use(bodyParser.raw({limit: "50mb" }));
 
 //handle routes
 
-var business = require("./business.js");
+var user = require("./user");
 
+// app.use("/user/getallUser", user.findAll);
+app.get('/user/getallUser', (req, res) => res.send('Hello World!'));
+
+var business = require("./business");
+
+console.log("router called");
 module.exports = app;
 
 

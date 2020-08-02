@@ -8,16 +8,15 @@ var async = require('async');
 
 
 /**
-
- * @api {post} /business/createBusiness   createBusiness
- *  @apiGroup Business
- * @apiName createBusiness
- * @apiParam {Number} id            Mandatory businessid
- * @apiParam {Number} first_name    Mandatory first_name.
- * @apiParam {Number} last_name   	Mandatory last_name.
+ *  @apiGroup category
+ * @api {post} /econnerce/createcategory   createcategory
+ * @apiName createcategory
+ * @apiParam {Number} id            Mandatory categoryid
+ * @apiParam {Number} category_name    Mandatory first_name.
+ * @apiParam {Number} category_image   	Mandatory last_name.
  * @apiParam {String} email_id  	Mandatory email_id.
  * @apiParam {String} password   	Mandatory password.
- * @apiParam {String} business_type  Mandatory user_type.
+ * @apiParam {String} category_type  Mandatory user_type.
  * @apiParam {Number} mobile_number   Optional mobile_number.
  * @apiParam {Number} country       country
  * @apiParam {Number} address   	Optional address.
@@ -33,15 +32,15 @@ var async = require('async');
 
 
 /**
- *  @apiGroup Business
- * @api {post} /business/updateBusiness     updateBusiness
- * @apiName  updateBusiness
- * @apiParam {Number} id            Mandatory businessid
+ *  @apiGroup category
+ * @api {post} /econnerce/updatecategory     updatecategory
+ * @apiName  updatecategory
+ * @apiParam {Number} id            Mandatory categoryid
  * @apiParam {Number} first_name    Mandatory first_name.
  * @apiParam {Number} last_name   	Mandatory last_name.
  * @apiParam {String} email_id  	Mandatory email_id.
  * @apiParam {String} password   	Mandatory password.
- * @apiParam {String} business_type  Mandatory user_type.
+ * @apiParam {String} category_type  Mandatory user_type.
  * @apiParam {Number} mobile_number   Optional mobile_number.
  * @apiParam {Number} country       country
  * @apiParam {Number} address   	Optional address.
@@ -58,28 +57,28 @@ var async = require('async');
 
 
  /**
- *  @apiGroup Business
- * @api {post} /business/deleteBusiness  deleteBusiness
- * @apiName deleteBusiness  
- * @apiParam {id} business   Mandatory id.
+ *  @apiGroup category
+ * @api {post} /category/deletecategory  deletecategory
+ * @apiName deletecategory  
+ * @apiParam {id} category   Mandatory id.
  * 
  */
 
 
  /**
- *  @apiGroup Business
- * @api {get} /business/getBusiness/:id  getBusiness
- * @apiName getBusiness
- * @apiParam {id} businessid   Mandatory id.
+ *  @apiGroup category
+ * @api {get} /category/getcategory/:id  getcategory
+ * @apiName getcategory
+ * @apiParam {id} categoryid   Mandatory id.
  * 
  */
 
 
 
 /**
- *  @apiGroup Business
- * @api {get} /business/getallBusiness  getallBusiness
- * @apiName getallBusiness
+ *  @apiGroup category
+ * @api {get} /category/getallcategory  getallcategory
+ * @apiName getallcategory
  * 
  * We would increase the fields as required.
  *

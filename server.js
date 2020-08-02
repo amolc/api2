@@ -1,19 +1,40 @@
-var connect = require('connect');
-var app = connect();
+var express = require('express');
+var app = express();
 var path = require('path');
 var serveStatic = require('serve-static');
-var apidoc = connect();
-var assets = connect();
-var router = require('./api/router');
+var bodyParser = require("body-parser");
+var env = require('./api/env');
+
 var globalfunctions = require('./api/globalfunctions');
 
-apidoc.use(serveStatic('apidoc'));
-assets.use(serveStatic('assets'));
+// handle cors
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    res.header( "Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH,OPTIONS" );
+    res.header("Access-Control-Allow-Credentials", false);
+    next();
+  });
+  
+  app.use(bodyParser.urlencoded({extended: false}));
+  app.use(bodyParser.json({limit: "50mb",extended: true,type: "application/json"}));
+  app.use(bodyParser.urlencoded({limit: "50mb",extended: true,type: "application/x-www-form-urlencoding"}));
+  app.use(bodyParser.json({type: "application/json"}));
+  app.use(bodyParser.raw({limit: "50mb" }));
 
-app.use('/', apidoc);
-app.use('/assets', assets);
+
+
+app.use('/', express.static(__dirname + '/apidoc'));
+app.use('/assets', express.static(__dirname + '/assets'));
+
+var user = require("./api/user");
+// app.use("/user/getallUser", user.findAll);
+app.get('/user/getallUser/:projectId', user.getallUser);
+
 
 
 global.appRoot = path.resolve(__dirname);
 app.listen(21000 );
 console.log('server is started at port: 21000');
+
+module.exports = app
