@@ -33,7 +33,7 @@
     "mysql-crud": "^0.1.4",
     "mysql-model": "0.0.3",
     "mysql-model-orm": "^2.1.4",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "nodemailer-mailgun-transport": "^2.0.0",
     "serve-static": "^1.14.1"
   },
