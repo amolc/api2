@@ -22,7 +22,7 @@
   "homepage": "https://github.com/amolc/api2#readme",
   "dependencies": {
     "async": "^3.2.0",
-    "aws-sdk": "^2.720.0",
+    "aws-sdk": "^2.814.0",
     "connect": "^3.7.0",
     "express": "^4.17.1",
     "fs-extra": "^9.0.1",
